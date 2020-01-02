@@ -1,0 +1,71 @@
+.app {
+  background:#7d6f74;
+  padding: 90px;
+  height: 100vh;
+
+}
+
+.todo-list {
+  background: #e8e8e8;
+  border-radius: 4px;
+  padding: 5px;
+  max-width: 490px;
+}
+
+.todo {
+  background: #fff;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  padding: 13px 10px;
+  font-size: 17px;
+  margin-bottom: 6px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.input{
+  background: #fff;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  padding: 13px 10px;
+  font-size: 15px;
+  margin-bottom: 6px;
+  border-radius: 3px;
+  width: 40vh;
+  align-items: center;
+  justify-content: space-between;
+}
+.add{
+  background: #fff;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  padding: 13px 10px;
+  font-size: 17px;
+  margin-bottom: 6px;
+  border-radius: 3px;
+  margin-left: 50px;
+  width: 20vh;
+  align-items: center;
+  justify-content: space-between;
+}
+.complete{
+  background: #fff;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  padding: 13px 10px;
+  font-size: 17px;
+  margin-bottom: 6px;
+  border-radius: 3px;
+  width: 15vh;
+  align-items: center;
+  justify-content: space-between;
+}
+.cross{
+  background: #fff;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  padding: 13px 10px;
+  font-size: 18px;
+  margin-bottom: 6px;
+  border-radius: 3px;
+  margin-left: 5px;
+  width: 5vh;
+  align-items: center;
+  justify-content: space-between;
+}
