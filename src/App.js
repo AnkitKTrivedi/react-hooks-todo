@@ -2,31 +2,33 @@ import * as React from 'react';
 import "./App.css";
 import ToDoForm from '../src/components/ToDoForm';
 import ToDoList from "./components/ToDoList";
-import {setItem, addItemInExitingList} from "./storage/LocalStorage";
-import {getToDoList} from "./utils/Utils";
+import {setItem} from "./storage/LocalStorage";
+import {getToDoList, removeItem, completeItem, addItem} from "./utils/Utils";
 
+const TODO_LIST_KEY = 'todoList';
 
   const App: React.FC = () => {
   const [todos, setTodos] = React.useState([]);
 
   const addTodoItem = text => {
-    const newTodos = [...todos, { text }];
-    addItemInExitingList('todoList', {text});
-    setTodos(newTodos);
+    let newTodoItems = [...getToDoList()];
+    newTodoItems = addItem(newTodoItems,{text});
+    setItem(TODO_LIST_KEY, newTodoItems);
+    setTodos(newTodoItems);
   };
 
   const completeTodoItem = index => {
-    const newTodos = [...getToDoList()];
-    newTodos[index].isCompleted = !newTodos[index].isCompleted;
-    setItem('todoList', JSON.stringify(newTodos));
-    setTodos(newTodos);
+    let newTodoItems = [...getToDoList()];
+    newTodoItems = completeItem(newTodoItems, index);
+    setItem(TODO_LIST_KEY, newTodoItems);
+    setTodos(newTodoItems);
   };
 
   const removeTodoItem = index => {
-    const newTodos = [...getToDoList()];
-    newTodos.splice(index, 1);
-    setItem('todoList', JSON.stringify(newTodos));
-    setTodos(newTodos);
+    let newTodoItems = [...getToDoList()];
+    newTodoItems = removeItem(newTodoItems,index);
+    setItem(TODO_LIST_KEY, newTodoItems);
+    setTodos(newTodoItems);
   };
 
   return (
