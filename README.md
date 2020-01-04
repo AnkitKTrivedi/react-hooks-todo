@@ -12,6 +12,16 @@ Install dependencies by running:
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+
+
+### `npm test` or `yarn test`
+
+Runs the test watcher in an interactive mode.<br>
+By default, runs tests related to files changed since the last commit.
+
+[Read more about testing.](https://facebook.github.io/create-react-app/docs/running-tests)
+
+
 ### `yarn build` or `npm build`
 
 Builds the app for production to the `build` folder.<br />
